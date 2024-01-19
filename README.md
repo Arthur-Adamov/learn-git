@@ -45,7 +45,7 @@ rm about.html (от англ. remove, "удалить") - удали файл ab
 rmdir images (от англ. remove direktory, "удали директорию") - удали папку images.
 
 
-
+Работа в GitHub.
 
 git remote add origin - связываем локальный репо с удаленным перед отправкой измененний в удаленный репо.
 
