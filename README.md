@@ -104,10 +104,11 @@
 
 Состояние **modified** означает, что **Git** сравнил содержимое файла с последней сохраненной версией и нашел отличия. Например, файл был закомичен и после этого изменен.
 
-flowchart TD
-    A(untracked) -->|git add| B(staged)
-    B --> |git commit| C(tracked)
-    C -->|изменения| D(modified)
-    B -->|изменения| D(mofified)
-    D -->|git add| B
-  
+  ```mermaid
+flowchart TD;
+    A(untracked) -->|git add| B(staged);
+    B --> |git commit| C(tracked);
+    C -->|изменения| D(modified);
+    B -->|изменения| D(mofified);
+    D -->|git add| B;
+```
