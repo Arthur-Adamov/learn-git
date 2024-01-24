@@ -127,3 +127,44 @@ flowchart TD;
 **Git** хранит таблицу соответствий `хеш → информация о коммите.` Если вы знаете хеш, вы можете узнать всё остальное: автора и дату коммита и содержимое закоммиченных файлов. Их можно будет передавать в качестве параметра разным **Git-командам**, чтобы указать, с каким коммитом нужно произвести то или иное действие.
 
 Все хеши и таблицу `хеш → информация о коммите` **Git** сохраняет в служебные файлы. Они находятся в скрытой папке `.git` в репозитории проекта.
+
+---
+
+## Исследуем лог.
+
+После вызова `git log` появляется список коммитов:
+
+```
+Артур@DESKTOP-VJEINQP MINGW64 ~/dev/learn-git (main)
+$ git log
+commit 32aa3e464aac7284e7f2c4c34d8fe22e7d4bbbc8 (HEAD -> main, origin/main)
+Author: Artur Adamov <artur.adamov03340@yandex.ru>
+Date:   Wed Jan 24 14:34:46 2024 +0300
+
+    исправил выделения команд MARKDOUW
+
+commit 494ac42e24d21c8faf9098169c75f741b75c9dad
+Author: Arthur-Adamov <vasiliy.moroz2601@gmail.com>
+Date:   Sun Jan 21 22:56:03 2024 +0300
+
+    добавил пункт в абзац Добавление файлов в репо
+
+commit 4101d1d3559bc74616003761d30992258d4625bd
+Author: Arthur-Adamov <vasiliy.moroz2601@gmail.com>
+Date:   Sun Jan 21 19:17:49 2024 +0300
+
+    добавил MARKDOWN
+```
+
+Получить сокращённый лог — `git log --oneline`:
+
+```
+Артур@DESKTOP-VJEINQP MINGW64 ~/dev/learn-git (main)
+$ git log --oneline
+32aa3e4 (HEAD -> main, origin/main) исправил выделения команд MARKDOUW
+8a89702 Update README.md
+494ac42 добавил пункт в абзац Добавление файлов в репо
+4101d1d добавил MARKDOWN
+bfb5ab8 исправил пункт Работа с GitHub.
+```
+
